@@ -4,7 +4,6 @@ const config = require('./config.json');
 const ncjs = require('./Modules/nochannel.js');
 const cmd = require('./Modules/commands.js');
 const readl = require('readline');
-const { config } = require('process');
 const rl = readl.createInterface(process.stdin, process.stdout);
 
 
