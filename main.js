@@ -4,6 +4,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const ncjs = require('./Modules/nochannel.js');
 const cmd = require('./Modules/commands.js');
 const readl = require('readline');
+const prefix = '^'
 const rl = readl.createInterface(process.stdin, process.stdout);
 
 
@@ -17,7 +18,7 @@ client.once('ready', () => {
 client.on('messageCreate', async message => {
     //ncjs.nochanneljs(message);
     if (message.author.bot === true) return;
-    if (message.content.startsWith(`${config.prefix}`)) {
+    if (message.content.startsWith(`${prefix}`)) {
         const params = message.content.split(' ');
         cmd.commands2(client, params[0], params[1], message, MessageEmbed);
     }
