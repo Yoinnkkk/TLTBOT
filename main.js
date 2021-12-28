@@ -1,4 +1,4 @@
-const { Client, Intents } = require('discord.js');
+const { Client, Intents, MessageEmbed, Message } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGES]});
 //const config = require('./config.json');
 const ncjs = require('./Modules/nochannel.js');
@@ -15,11 +15,11 @@ client.once('ready', () => {
 
 
 client.on('messageCreate', async message => {
-    ncjs.nochanneljs(message);
-    if (message.author.client) return;
+    //ncjs.nochanneljs(message);
+    if (message.author.bot === true) return;
     if (message.content.startsWith(`${config.prefix}`)) {
         const params = message.content.split(' ');
-        cmd.commands2(client, params[0], params[1], message, Client);
+        cmd.commands2(client, params[0], params[1], message, MessageEmbed);
     }
 });
 
