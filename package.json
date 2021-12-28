@@ -1,0 +1,11 @@
+{
+  "name": "tltbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "author": "Yoink",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
