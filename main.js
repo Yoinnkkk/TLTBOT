@@ -4,7 +4,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const ncjs = require('./Modules/nochannel.js');
 const cmd = require('./Modules/commands.js');
 const readl = require('readline');
-const prefix = '^'
+const prefix = '$'
 const rl = readl.createInterface(process.stdin, process.stdout);
 
 
