@@ -129,8 +129,9 @@ let commands2 = async function (client, command, param1, m, MessageEmbed) {
             m.channel.send(`🏓 Latency is ${m.createdTimestamp - m.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
             break;
         case "$say":
-            var splonk = m.content.split('$say ');
-            m.channel.send(splonk[1]);
+            var splonk = m.content.split('$say ', 1);
+            if (splonk[1].includes("cock") == false || splonk[1].includes("dick") == false) {m.channel.send(splonk[1]);} else {m.channel.send(`🤨?`)}
+            
             break;
         default:
             m.channel.send('I dont understand');
