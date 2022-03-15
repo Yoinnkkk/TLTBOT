@@ -129,7 +129,7 @@ let commands2 = async function (client, command, param1, m, MessageEmbed) {
             m.channel.send(`🏓 Latency is ${m.createdTimestamp - m.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
             break;
         case "$say":
-            var splonk = m.content.split('^say ');
+            var splonk = m.content.split('$say ');
             m.channel.send(splonk[1]);
             break;
         default:
