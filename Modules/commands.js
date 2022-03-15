@@ -132,6 +132,7 @@ let commands2 = async function (client, command, param1, m, MessageEmbed) {
             console.log(m.content);
             var splonk = m.content.split(' ', 2);
             splonk.splice(0,1);
+            splonk = toString(splonk);
             console.log(splonk);
             if (splonk.includes('cock') == false || splonk.includes('dick') == false) {m.channel.send(splonk);} else {m.channel.send(`bro? 🤨`)}
             break;
