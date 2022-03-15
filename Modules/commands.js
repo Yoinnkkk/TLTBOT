@@ -130,7 +130,7 @@ let commands2 = async function (client, command, param1, m, MessageEmbed) {
             break;
         case "$say":
             var splonk = m.content.split('$say ', 1);
-            print(splonk);
+            console.log(splonk);
             if (splonk[1].includes("cock") == false || splonk[1].includes("dick") == false) {m.channel.send(splonk[1]);} else {m.channel.send(`bro? 🤨`)}
             break;
         default:
